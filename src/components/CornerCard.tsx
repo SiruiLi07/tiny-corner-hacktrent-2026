@@ -36,17 +36,17 @@ export const CornerCard: React.FC<CornerCardProps> = ({
       className="masonry-item group cursor-pointer bg-white rounded-2xl overflow-hidden border border-[#E8E1D7] hover:border-[#C4B7A5] hover:shadow-lg transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[#1B3B2B] focus:outline-none flex flex-col"
     >
       {/* Visual Image Header */}
-      <div className="relative aspect-4/3 w-full bg-[#EAE2D5] overflow-hidden">
+      <div className="corner-card-media relative aspect-4/3 w-full bg-[#EAE2D5] overflow-hidden">
         {!imageError ? (
           <img
             src={item.imageUrl}
             alt={item.title}
             onError={() => setImageError(true)}
             loading="lazy"
-            className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+            className="corner-card-artwork w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center p-4 text-[#8C7E70] bg-[#EFE9DF]">
+          <div className="corner-card-artwork w-full h-full flex flex-col items-center justify-center p-4 text-[#8C7E70] bg-[#EFE9DF]">
             <Sparkles className="w-8 h-8 text-[#C85A32] mb-1" />
             <span className="text-xs font-serif italic text-center">{item.category}</span>
           </div>

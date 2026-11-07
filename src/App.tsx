@@ -98,6 +98,12 @@ export default function App() {
       root.removeAttribute('data-text-size');
     }
 
+    if (accessibility.simplifiedReading) {
+      root.setAttribute('data-simplified-reading', 'true');
+    } else {
+      root.removeAttribute('data-simplified-reading');
+    }
+
     if (accessibility.reducedMotion) {
       root.setAttribute('data-reduced-motion', 'true');
     } else {

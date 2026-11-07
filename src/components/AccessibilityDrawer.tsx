@@ -180,7 +180,7 @@ export const AccessibilityDrawer: React.FC<AccessibilityDrawerProps> = ({
                 </div>
                 <div>
                   <div className="text-sm font-bold text-[#1F2922]">Simplified Reading Mode</div>
-                  <div className="text-xs text-[#7A6B5D]">Clean, distraction-free view for event details</div>
+                  <div className="text-xs text-[#7A6B5D]">Text-focused cards and event details</div>
                 </div>
               </div>
 

@@ -136,3 +136,33 @@
   break-inside: avoid;
   margin-bottom: 1.25rem;
 }
+
+/* Keep the feed in reading order and show the full text of each card. */
+[data-simplified-reading="true"] .masonry-grid {
+  column-count: 1;
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+[data-simplified-reading="true"] .masonry-item .line-clamp-2,
+[data-simplified-reading="true"] .masonry-item .line-clamp-3 {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+[data-simplified-reading="true"] .corner-card-media {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1rem 0;
+  aspect-ratio: auto;
+  background: transparent;
+}
+
+[data-simplified-reading="true"] .corner-card-artwork {
+  display: none;
+}
+
+[data-simplified-reading="true"] .corner-card-media > .absolute {
+  position: static;
+}
