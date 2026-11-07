@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Fraunces", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #1F2922;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Accessible focus ring indicators */
+*:focus-visible {
+  outline: 2px solid #1B3B2B;
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+[data-contrast="high"] {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+[data-contrast="high"] body {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+[data-contrast="high"] [role="dialog"],
+[data-contrast="high"] .bg-white,
+[data-contrast="high"] .bg-\[\#FAF7F2\],
+[data-contrast="high"] .bg-\[\#F8F5EE\],
+[data-contrast="high"] .bg-\[\#F5EFEB\],
+[data-contrast="high"] .bg-\[\#EBE4D8\],
+[data-contrast="high"] .bg-\[\#FAF6F0\] {
+  background-color: #0B140D !important;
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+[data-contrast="high"] article,
+[data-contrast="high"] .rounded-2xl,
+[data-contrast="high"] .rounded-3xl {
+  border-color: #FFFFFF !important;
+}
+
+[data-contrast="high"] input,
+[data-contrast="high"] textarea,
+[data-contrast="high"] select {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #FFFFFF !important;
+}
+
+[data-contrast="high"] input::placeholder,
+[data-contrast="high"] textarea::placeholder {
+  color: #D1D5DB !important;
+}
+
+[data-contrast="high"] h1,
+[data-contrast="high"] h2,
+[data-contrast="high"] h3,
+[data-contrast="high"] p,
+[data-contrast="high"] span,
+[data-contrast="high"] label {
+  color: #FFFFFF !important;
+}
+
+[data-contrast="high"] .text-\[\#1B3B2B\],
+[data-contrast="high"] .text-\[\#3E352B\],
+[data-contrast="high"] .text-\[\#554B40\],
+[data-contrast="high"] .text-\[\#6C5E50\],
+[data-contrast="high"] .text-\[\#7A6B5D\],
+[data-contrast="high"] .text-stone-600,
+[data-contrast="high"] .text-stone-500,
+[data-contrast="high"] .text-stone-400 {
+  color: #F1F5F9 !important;
+}
+
+[data-contrast="high"] .text-\[\#C85A32\],
+[data-contrast="high"] .text-\[\#F4C462\] {
+  color: #FFD166 !important;
+}
+
+[data-contrast="high"] button {
+  border-color: #FFFFFF !important;
+}
+
+[data-contrast="high"] *:focus-visible {
+  outline: 3px solid #FFD166 !important;
+  outline-offset: 3px !important;
+}
+
+/* Text Size scaling */
+[data-text-size="large"] {
+  font-size: 110%;
+}
+
+[data-text-size="xlarge"] {
+  font-size: 125%;
+}
+
+/* Masonry column support for Pinterest-like aesthetic */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .masonry-grid {
+    column-count: 4;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}

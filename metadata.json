@@ -1,0 +1,6 @@
+{
+  "name": "Tiny Corner",
+  "description": "Hyperlocal lifestyle discovery and micro-community meetups platform for students and young adults in Peterborough, Ontario.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
